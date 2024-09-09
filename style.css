@@ -611,4 +611,106 @@ button {
 .pricing-plan {
   width: 80%;
   margin: 0 auto;
+  margin-top: 115px;
+}
+
+.pricing-plan-text {
+  display: flex;
+
+  h4 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    letter-spacing: 0.05em;
+    color: #353434;
+  }
+
+  p {
+    width: 543px;
+    font-size: 14px;
+    line-height: 1.71429;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #959595;
+    margin-left: 30px;
+  }
+}
+.pricing-cards {
+  display: flex;
+  margin-top: 37px;
+  justify-content: space-between;
+  gap: 30px;
+}
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: -1px 1px 20px 0 rgba(127, 127, 127, 0.1);
+  background: #fff;
+  width: 350px;
+  padding: 62px 65px;
+}
+.tariff {
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  color: #4238af;
+  margin-bottom: 31px;
+}
+.price {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 45px;
+  letter-spacing: 0.07em;
+  text-align: center;
+  color: #353434;
+  margin-bottom: 24px;
+}
+.term {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #8a86b9;
+  margin-bottom: 71px;
+}
+.btn-pricing {
+  width: 172px;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #fff;
+  border-radius: 50px;
+  background: #bdbbd9;
+  padding: 13px 23px;
+  margin-top: 60px;
+}
+.pricing-card-features {
+  width: 219px;
+  height: 104px;
+}
+.feature-item {
+  position: relative;
+  padding-left: 30px;
+  font-size: 14px;
+  color: #a8a8a8;
+
+  &:not(:last-child) {
+    margin-bottom: 19px;
+  }
+}
+.feature-item::before {
+  content: url("/img/check.png");
+  position: absolute;
+  top: 62%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.footer{
+  width: 100%;
+  background: #dbe2ff;
+  border-radius: 30px 30px 0 0;
+  margin-top: 115px;
 }
