@@ -840,6 +840,12 @@ button {
   line-height: 2.16667;
   letter-spacing: 0.02em;
   color: #3a2e5c;
+
+  &:hover,
+  &:focus {
+    font-size: 14px;
+    line-height: 1.85714;
+  }
 }
 
 .social-container {
