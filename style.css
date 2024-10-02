@@ -46,7 +46,10 @@ button {
   font-weight: 400;
   font-size: 1.6rem;
 }
-
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -79,6 +82,7 @@ button {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  max-width: 43.3rem;
 }
 
 .link {
@@ -91,6 +95,7 @@ button {
   &:hover,
   &:focus {
     color: #4238af;
+    text-decoration: underline;
   }
 }
 .search {
@@ -99,7 +104,8 @@ button {
   align-items: center;
 }
 .search-input {
-  width: 30.7rem;
+  width: 100%;
+  max-width: 30.7rem;
   font-size: 1.4rem;
   border-radius: 50px;
   background: #fff;
@@ -111,18 +117,22 @@ button {
   }
 }
 
+
+
 .search-btn {
   position: absolute;
   right: 5px;
   width: 2.8rem;
   height: 2.8rem;
   border-radius: 100%;
+  cursor: pointer;
 }
 .login {
-  width: 11.7rem;
+  width: 100%;
+  max-width: 11.7rem;
 
   a {
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 3.875;
     letter-spacing: 0.02em;
     color: #272323;
@@ -130,16 +140,42 @@ button {
     &:hover,
     &:focus {
       color: #4238af;
+      text-decoration: underline;
     }
   }
 
   span {
-    font-size: 16px;
+    font-size: 1.6rem;
     color: #272323;
   }
 }
+
+@media (max-width:1300px) {
+  .search-input {
+    max-width: 23.7rem;
+    font-size: 1.1rem;
+    padding: 1rem 14.1rem 1rem 1.2rem;
+  }
+
+  .search-btn{
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  .login {
+    a{
+      font-size: 1.2rem;
+    }
+  }
+
+  .link {
+    font-size: 1.3rem;
+    
+     }
+}
 .hero {
   display: flex;
+  width: 100%;
   background-color: #f5f7ff;
   align-items: center;
   padding: 5.5rem 16.5rem 0rem 16.5rem;
@@ -194,6 +230,16 @@ button {
   color: #000;
   background: transparent;
 }
+
+.btn-watch-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.4rem;
+  height: 4.4rem;
+  background-color: white;
+  border-radius: 50%;
+}
 .image-container {
   width: 100%;
   max-width: 56.8rem;
@@ -213,6 +259,10 @@ button {
   justify-content: space-between;
   padding: 11.5rem 16.5rem 11.5rem 16.5rem;
   align-items: center;
+
+  img {
+    display: block;
+  }
 }
 .section-job {
   display: flex;
@@ -242,10 +292,15 @@ button {
   background: #f5f7ff;
   border-radius: 8px;
   width: 43.5rem;
-  height: 5.8rem;
+  height: auto;
+  padding-left: 14px;
   &:not(:last-child) {
     margin-bottom: 2.2rem;
   }
+}
+.box-step2 {
+  display: flex;
+  flex-direction: column;
 }
 .step-1,
 .step-2,
@@ -276,6 +331,13 @@ button {
   }
 }
 .step-2 {
+  display: flex;
+  justify-content: space-between;
+
+  div {
+    display: flex;
+    align-items: center;
+  }
   p {
     background: #e7e9fe;
     color: #626fff;
@@ -299,17 +361,22 @@ button {
   line-height: 1.83333;
   letter-spacing: 0.02em;
   color: #a8a8a8;
+  margin-top: 1rem;
+  margin-left: 5.9rem;
 }
 .btn-step {
   background: transparent;
-  margin-right: 2.4rem;
+  margin-right: 1rem;
+  cursor: pointer;
 }
 .video-wrapper {
   width: 63.5rem;
   margin-left: 4rem;
+  margin-top: 2rem;
 }
 .responsive-iframe {
   width: 100%;
+  height: 100%;
   border-radius: 2rem;
 }
 .why-choose-us {
@@ -392,25 +459,33 @@ button {
   }
 }
 .featured-jobs {
+  width: 100vw;
+  overflow: hidden;
   margin-top: 11.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 .workers-cards {
   display: flex;
   align-items: center;
-  width: 100vw;
+  width: 100%;
+ 
 }
 .slider-arrows {
   margin-right: 5.1rem;
   display: flex;
   gap: 2rem;
-  margin-left: 8px;
+  margin-left: 69px;
+
+  button {
+    cursor: pointer;
+  }
 }
 .employee-card {
   position: relative;
-  width: 38rem;
+  max-width: 38rem;
   border-radius: 2rem;
   box-shadow: -1px 1px 20px 0 rgba(127, 127, 127, 0.1);
   background: #fff;
@@ -429,17 +504,17 @@ button {
       box-shadow: 0 12px 30px 0 rgba(71, 71, 71, 0.15);
     }
   }
-
-  img {
-    border-radius: 100%;
-    width: 8.3rem;
-    border: 4px solid #fea06b;
-  }
 }
-
+.card-photo {
+  display: block;
+  border-radius: 50%;
+  width: 83px;
+  border: 4px solid #fea06b;
+}
 .ellipsis {
   position: absolute;
   right: 3.7rem;
+  cursor: pointer;
 }
 .employee-title {
   font-family: "Open Sans", sans-serif;
@@ -512,6 +587,32 @@ button {
     }
   }
 }
+.box-like {
+  display: flex;
+  width: 49px;
+  height: 49px;
+  border-radius: 50%;
+  background-color: #f9faff;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, fill 0.3s;
+
+  svg{
+    fill: #FF5C00;
+    transition: fill 0.3s;
+  }
+}
+
+.box-like:hover,
+.box-like:focus{
+  background-color: #FF5C00;
+}
+
+.box-like:hover svg,
+.box-like:focus svg{
+  fill: #FFFFFF;
+}
+
 .btn-view-more {
   width: 15.2rem;
   height: 4.9rem;
@@ -569,6 +670,9 @@ button {
     align-items: center;
     margin-top: 16px;
   }
+  .stars{
+    width: 89px;
+  }
   .rating {
     font-weight: 600;
     font-size: 20px;
@@ -586,30 +690,36 @@ button {
 .navigation-arrows {
   display: flex;
   gap: 15px;
+
+  button{
+    cursor: pointer;
+  }
 }
 .avatars {
   display: flex;
   align-items: center;
-  width: 140px;
+  /* position: relative; */
 }
 .avatar {
   width: 50px;
   height: 50px;
-  border-radius: 100%;
+  border-radius: 50%;
   border: 4px solid #ff5c00;
+  margin-left: -20px;
+  /* z-index: 1; */
 }
 .more-avatars {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
+  display: flex;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
   background-color: #a9a3e9;
-  border: 4px solid #a9a3e9;
   font-size: 14px;
-  line-height: 1.71429;
   letter-spacing: 0.02em;
-  text-align: center;
+  align-items: center;
   color: #4238af;
+  justify-content: center;
+  margin-left: -20px;
 }
 .section-statistics {
   background: #ced5f4;
@@ -644,36 +754,18 @@ button {
   margin-top: 14px;
 }
 .pricing-plan {
+  display: flex;
+  flex-direction: column;
   width: 80%;
   margin: 0 auto;
   margin-top: 115px;
+  align-items: center
 }
 
-.pricing-plan-text {
-  display: flex;
 
-  h4 {
-    font-family: "Oswald", sans-serif;
-    font-weight: 400;
-    font-size: 40px;
-    letter-spacing: 0.05em;
-    color: #353434;
-  }
-
-  p {
-    width: 543px;
-    font-size: 14px;
-    line-height: 1.71429;
-    letter-spacing: 0.02em;
-    text-align: center;
-    color: #959595;
-    margin-left: 30px;
-  }
-}
 .pricing-cards {
   display: flex;
   margin-top: 37px;
-  justify-content: space-between;
   gap: 30px;
 }
 .pricing-card {
@@ -684,7 +776,7 @@ button {
   box-shadow: -1px 1px 20px 0 rgba(127, 127, 127, 0.1);
   background: #fff;
   width: 350px;
-  padding: 62px 65px;
+  padding: 62px 0;
   transition: transform 0.3s ease;
 
   &:hover,
@@ -693,6 +785,12 @@ button {
     background: #f9faff;
     box-shadow: 0 12px 30px 0 rgba(71, 71, 71, 0.15);
   }
+}
+
+.pricing-card:hover .btn-pricing,
+.pricing-card:focus .btn-pricing {
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+  background: #544cac;
 }
 .tariff {
   font-weight: 600;
@@ -729,11 +827,7 @@ button {
   padding: 13px 23px;
   margin-top: 60px;
 
-  &:hover,
-  &:focus {
-    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
-    background: #544cac;
-  }
+ 
 }
 .pricing-card-features {
   width: 219px;
@@ -767,7 +861,6 @@ button {
 
 .footer-box {
   display: flex;
-  width: 1110px;
   justify-content: space-between;
 }
 
@@ -794,7 +887,12 @@ button {
     &:not(:last-child) {
       margin-bottom: 18px;
     }
+
+    
   }
+  a:hover{
+    color: #272626;
+    }
 }
 
 .footer-nav {
@@ -867,12 +965,15 @@ button {
   align-items: center;
   justify-content: center;
   align-content: center;
-  color: #000;
-
-  img {
-    display: block;
-  }
+  transition: all 0.3s ease;
 }
-.twitter {
+.svg-icon {
+  fill: #979797;
+  transition: fill 0.3s ease;
+}
+.social-icon:hover .svg-icon {
+  fill: #fff;
+}
+.social-icon:hover {
   background-color: rgba(66, 56, 175, 0.81);
 }
